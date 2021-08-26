@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const server = express();
+const port = 3000;
 const staticDir = path.join(__dirname, `public`);
 server.use(express.static(staticDir));
 server.get("/", (req, res) => {
@@ -11,3 +12,4 @@ server.get("/", (req, res) => {
       .type(".html")
       .sendFile(path.join(__dirname, "public", "html", "landingpage.html"));
   });
+server.listen(port,()=>{`Example app listening at http://localhost:${port}`})
