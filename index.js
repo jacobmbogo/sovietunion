@@ -12,4 +12,11 @@ server.get("/", (req, res) => {
     .type(".html")
     .sendFile(path.join(__dirname, "public", "html", "hermes.html"));
 });
+server.get("/products",(req,res)=>{
+  console.log(req.url);
+  res
+  .status(200)
+  .type(".html")
+  .sendFile(path.join(__dirname, "public", "html", "hermes.html"));
+});
 server.listen(port, () => { `Example app listening at http://localhost:${port}` })  
