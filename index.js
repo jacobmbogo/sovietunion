@@ -6,10 +6,10 @@ const port = 3000;
 const staticDir = path.join(__dirname, `public`);
 server.use(express.static(staticDir));
 server.get("/", (req, res) => {
-    console.log(req.url);
-    res
-      .status(200)
-      .type(".html")
-      .sendFile(path.join(__dirname, "public", "html", "landingpage.html"));
-  });
-server.listen(port,()=>{`Example app listening at http://localhost:${port}`})
+  console.log(req.url);
+  res
+    .status(200)
+    .type(".html")
+    .sendFile(path.join(__dirname, "public", "html", "hermes.html"));
+});
+server.listen(port, () => { `Example app listening at http://localhost:${port}` })  
